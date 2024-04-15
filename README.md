@@ -16,8 +16,8 @@ Pictures should be converted to a 300px wide JPG, and preferably optimized to im
 
 ```
 # Convert to jpg
-find . -name '*.png' -print0 | xargs -0 mogrify -format jpg && find . -name '*.png' -print0 | xargs -0 rm
+find . -name '*.png' -print0 | xargs -0 magick mogrify -format jpg && find . -name '*.png' -print0 | xargs -0 rm
 
 # Resize to a 300px wide image
-find . -name '*.jpg' -print0 | xargs -0 mogrify -resize 300
+find . -name '*.jpg' -print0 | xargs -0 magick mogrify -resize 300
 ```
